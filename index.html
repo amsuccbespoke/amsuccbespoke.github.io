@@ -3,97 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMSUCC BESPOKE - Perfectly Stitched</title>
+  <title>AMSUCC BESPOKE | Perfectly Stitched</title>
   <style>
-    body {
+    /* Reset default margins */
+    body, h1, p {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      text-align: center;
+      padding: 0;
     }
 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header / Navbar */
     header {
-      background: #111;
-      padding: 40px 20px;
+      background: black;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      color: gold;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
+      color: goldenrod;
+      font-size: 22px;
     }
 
     nav {
-      background: #222;
-      padding: 10px;
+      display: flex;
+      gap: 20px;
     }
 
     nav a {
-      color: gold;
-      margin: 0 15px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
+      color: goldenrod;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: url("images/kaftan1.jpg") center/cover no-repeat;
       color: white;
     }
 
-    section {
-      padding: 50px 20px;
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
 
-    .hero {
-      background: url('images/hero.jpg') no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: gold;
-      font-size: 2rem;
-      font-weight: bold;
+    .hero p {
+      font-size: 18px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
 
+    /* Footer */
     footer {
-      background: #111;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #aaa;
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header with Menu -->
   <header>
     <h1>AMSUCC BESPOKE</h1>
-    <p>Perfectly Stitched</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
-  </nav>
-
+  <!-- Hero Section -->
   <section class="hero">
-    Tailored Elegance
+    <h2>Perfectly Stitched</h2>
+    <p>Bespoke Kaftans, Agbadas, Shirts & More</p>
   </section>
 
-  <section>
-    <h2>Our Craft</h2>
-    <p>
-      We design and sew premium <strong>Agbada</strong>, <strong>Kaftan</strong>, 
-      <strong>English wear</strong>, and <strong>Vintage shirts</strong> with precision.
-    </p>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    © 2025 AMSUCC BESPOKE | Perfectly Stitched
+    <p>&copy; 2025 AMSUCC BESPOKE | Perfectly Stitched</p>
   </footer>
+
 </body>
 </html>
