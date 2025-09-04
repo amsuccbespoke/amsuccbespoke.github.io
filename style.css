@@ -103,3 +103,24 @@ a:hover{text-decoration:underline}
 /* Helpers */
 .note{padding-bottom:56px}
 .inline-cta{font-weight:700}
+/* =======================
+   About Page Styles
+   ======================= */
+.page-content {
+  padding: 4rem 1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent, gold); /* will use your theme accent color */
+}
+
+.page-content p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  }
+       
