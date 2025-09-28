@@ -6,7 +6,7 @@
   <title>AMSUCC BESPOKE — Perfectly stitched.</title>
   <meta name="description" content="AMSUCC BESPOKE crafts premium menswear in Lagos: agbada, kaftan, shirts, trousers, and bespoke suits. Perfectly stitched. Book an appointment on WhatsApp.">
   <meta name="keywords" content="AMSUCC, bespoke, tailor, menswear, agbada, kaftan, native wear, suits, Lagos, Badagry, Oko-Afo, tailoring">
- <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -16,9 +16,9 @@
 <header class="site-header">
   <div class="container nav-wrapper">
     <a class="brand" href="index.html" aria-label="AMSUCC Home">
-<span class="logo-mark" aria-hidden="true">
-  <img src="favicon.png" alt="AMSUCC" style="width: 42px; height: 42px;">
-</span>
+      <span class="logo-mark" aria-hidden="true">
+        <img src="favicon.png" alt="AMSUCC" style="width: 42px; height: 42px;">
+      </span>
       <span class="brand-text">AMSUCC <em>BESPOKE</em></span>
     </a>
 
@@ -72,23 +72,31 @@
 
   <div class="contact-card">
     <h3>Send a Message</h3>
-    <form class="contact-form" name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact">
+    <form class="contact-form" onsubmit="redirectToWhatsApp(event)">
       <label>Full Name
-        <input type="text" name="name" required>
+        <input type="text" id="name" required placeholder="Your full name">
       </label>
-      <label>Email
-        <input type="email" name="email" required>
+      <label>Phone Number
+        <input type="tel" id="phone" required placeholder="Your WhatsApp number">
+      </label>
+      <label>Garment Type
+        <select id="garment">
+          <option value="">Select garment type</option>
+          <option value="Agbada">Agbada</option>
+          <option value="Kaftan">Kaftan</option>
+          <option value="Suit">Suit</option>
+          <option value="Shirt & Trousers">Shirt & Trousers</option>
+          <option value="Other">Other</option>
+        </select>
       </label>
       <label>Message
-        <textarea name="message" rows="5" required></textarea>
+        <textarea id="message" rows="4" required placeholder="Tell us about your design preferences, measurements, or event date..."></textarea>
       </label>
-      <button type="submit" class="btn-cta">Send Message</button>
+      <button type="submit" class="btn-cta">📱 Send via WhatsApp</button>
     </form>
-    <p class="form-note">Prefer chat? Use WhatsApp for the fastest response.</p>
+    <p class="form-note">We'll respond within minutes on WhatsApp!</p>
   </div>
 </section>
-
 
 <footer class="site-footer">
   <div class="container footer-grid">
@@ -115,6 +123,25 @@
   </div>
   <div class="copyright">© 2025 AMSUCC BESPOKE. All Rights Reserved.</div>
 </footer>
+
+<script>
+function redirectToWhatsApp(event) {
+  event.preventDefault();
+  
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const garment = document.getElementById('garment').value;
+  const message = document.getElementById('message').value;
+  
+  const whatsappMessage = `Hello AMSUCC BESPOKE! 👋\n\nI'm *${name}*\nPhone: *${phone}*\nGarment: *${garment}*\n\nMessage: ${message}\n\nI'd like to book an appointment.`;
+  
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+  window.open(`https://wa.me/2348079444199?text=${encodedMessage}`, '_blank');
+  
+  // Clear form after sending
+  event.target.reset();
+}
+</script>
 
 </body>
 </html>
