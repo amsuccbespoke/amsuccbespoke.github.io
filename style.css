@@ -40,7 +40,14 @@ a:hover{text-decoration:underline}
 }
 
 /* Hero */
-.hero{background: radial-gradient(1200px 600px at 70% -10%, rgba(212,175,55,.18), transparent 60%), linear-gradient(180deg, #0a0a0a 0%, #0d0d0d 100%);padding:84px 0 64px;border-bottom:1px solid #141414}
+.hero {
+  background: radial-gradient(1200px 600px at 70% -10%, 
+              rgba(212, 175, 55, 0.15), 
+              transparent 60%), 
+              linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+  padding: 84px 0 64px;
+  border-bottom: 1px solid #141414;
+}
 .hero-inner h1{font-size:clamp(36px,5vw,56px);line-height:1.1;margin:0 0 12px}
 .hero-inner .accent{color:var(--accent)}
 .lead{color:var(--muted);max-width:720px}
