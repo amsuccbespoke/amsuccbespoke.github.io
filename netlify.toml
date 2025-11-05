@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "https://fawlux.netlify.app/:splat"
-  status = 301
-  force = true
