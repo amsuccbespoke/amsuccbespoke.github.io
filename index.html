@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="AMSUCC BESPOKE is now FAWLUX — same craftsmanship, new identity. Redirecting you to our official FAWLUX website." />
+  <meta charset="UTF-8">
+  <meta name="description" content="AMSUCC BESPOKE has rebranded to FAWLUX. Redirecting to the new site." />
   <meta name="robots" content="noindex,follow" />
-  <meta http-equiv="refresh" content="3; url=https://fawlux.netlify.app" />
-  <link rel="canonical" href="https://fawlux.netlify.app" />
-  <title>We’ve rebranded to FAWLUX</title>
+  <link rel="canonical" href="https://fawlux.netlify.app/" />
+  <title>AMSUCC → FAWLUX</title>
 
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      text-align: center;
-      padding: 60px;
-      background-color: #fafafa;
-      color: #222;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 16px;
-      color: #555;
-    }
-    a {
-      color: #b4975a;
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
+  <script>
+    // Simple redirect mapping for old pages
+    const redirects = {
+      "/": "https://fawlux.netlify.app/",
+      "/gallery": "https://fawlux.netlify.app/gallery",
+      "/contact": "https://fawlux.netlify.app/contact"
+    };
+
+    const path = window.location.pathname.toLowerCase();
+    const destination = redirects[path] || "https://fawlux.netlify.app/";
+    setTimeout(() => {
+      window.location.href = destination;
+    }, 3000); // 3-second delay
+  </script>
 </head>
-<body>
-  <h1>We’ve rebranded to <span style="color:#b4975a;">FAWLUX</span></h1>
-  <p>AMSUCC BESPOKE is now <strong>FAWLUX</strong> — same craftsmanship, new identity.</p>
-  <p>You’ll be redirected shortly… or click below:</p>
-  <p><a href="https://fawlux.netlify.app">Visit FAWLUX Now</a></p>
+<body style="font-family:Arial,sans-serif; text-align:center; padding:50px; background:#fafafa; color:#222;">
+  <h1>AMSUCC BESPOKE is now <span style="color:#b4975a;">FAWLUX</span></h1>
+  <p>Redirecting you to our new website…</p>
+  <p>If not redirected automatically, click here: <a href="https://fawlux.netlify.app">Go to FAWLUX</a></p>
 </body>
 </html>
